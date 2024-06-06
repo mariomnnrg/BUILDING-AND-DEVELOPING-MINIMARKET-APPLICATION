@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="428.0" prefWidth="723.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="login.FXMLDocumentController">
+    <stylesheets>
+        <URL value="@fxml.css" />
+    </stylesheets>
+   <children>
+        <TextField fx:id="usernameField" layoutX="438.0" layoutY="127.0" prefHeight="40.0" prefWidth="248.0" promptText="Username" />
+        <PasswordField fx:id="passwordField" layoutX="438.0" layoutY="225.0" prefHeight="40.0" prefWidth="248.0" promptText="Password" />
+        <Button layoutX="504.0" layoutY="290.0" onAction="#handleLoginAction" prefHeight="30.0" prefWidth="90.0" text="Login" textAlignment="CENTER">
+         <font>
+            <Font size="16.0" />
+         </font></Button>
+      <Label layoutX="439.0" layoutY="88.0" text="Email" textFill="#8d2020">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <Label layoutX="438.0" layoutY="184.0" text="Password">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <Button accessibleRole="CHECK_MENU_ITEM" layoutX="595.0" layoutY="354.0" onAction="#handleRegisterAction" text="Register Here" textAlignment="CENTER" textOverrun="CENTER_WORD_ELLIPSIS">
+         <font>
+            <Font size="15.0" />
+         </font></Button>
+      <Label layoutX="446.0" layoutY="359.0" text="Dont Have Account? ">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <AnchorPane prefHeight="428.0" prefWidth="364.0" styleClass="image-container">
+         <children>
+            <ImageView fitHeight="205.0" fitWidth="232.0" layoutX="80.0" layoutY="112.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/minimarket.png" />
+               </image>
+            </ImageView>
+            <Text fill="#468a4d" layoutX="37.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Minimarket">
+               <font>
+                  <Font name="Berlin Sans FB" size="60.0" />
+               </font>
+            </Text>
+            <Text fill="#679e51" layoutX="26.0" layoutY="366.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Harga Murah Banyak Pilihan">
+               <font>
+                  <Font name="Constantia" size="25.0" />
+               </font>
+            </Text>
+         </children></AnchorPane>
+      <Text layoutX="505.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="35.0" />
+         </font>
+      </Text>
+    </children>
+   <effect>
+      <ColorAdjust brightness="-0.23" contrast="0.02" hue="1.0" saturation="-0.3" />
+   </effect>
+</AnchorPane>

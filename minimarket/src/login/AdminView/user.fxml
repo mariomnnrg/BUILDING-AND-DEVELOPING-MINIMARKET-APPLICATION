@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="724.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="login.AdminView.adminController">
+      <stylesheets>
+        <URL value="@fxml.css" />
+    </stylesheets>
+    <left>
+        <!-- Sidebar -->
+        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="171.0" spacing="10.0">
+         <AnchorPane prefHeight="269.0" prefWidth="171.0">
+            <children>
+               <AnchorPane layoutX="-3.0" layoutY="-1.0" prefHeight="724.0" prefWidth="325.0" style="-fx-border-color: black;">
+                  <children>
+                     <Text layoutX="11.0" layoutY="313.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Selamat Datang Admin">
+                        <font>
+                           <Font size="30.0" />
+                        </font>
+                     </Text>
+                        <Label fx:id="profileLabel" layoutX="92.0" layoutY="327.0" text="Nama Profil">
+                        <font>
+                           <Font name="System Bold" size="24.0" />
+                        </font>
+                     </Label>
+                       <Button fx:id="logoutButton" layoutX="74.0" layoutY="520.0" onAction="#logout" prefHeight="45.0" prefWidth="180.0" text="Logout">
+                        <font>
+                           <Font size="25.0" />
+                        </font>
+                     </Button>
+                     <ImageView fitHeight="184.0" fitWidth="176.0" layoutX="76.0" layoutY="65.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@../../image/user.png" />
+                        </image>
+                     </ImageView>
+                  </children>
+               </AnchorPane>
+            </children>
+         </AnchorPane>
+        </VBox>
+    </left>
+   <center>
+      <AnchorPane prefHeight="573.0" prefWidth="582.0" style="-fx-border-color: black;" BorderPane.alignment="CENTER">
+         <children>
+                <TextField fx:id="kodeField" layoutX="16.0" layoutY="215.0" prefHeight="37.0" prefWidth="171.0" promptText="Code" />
+               <TextField fx:id="namaField" layoutX="16.0" layoutY="142.0" prefHeight="35.0" prefWidth="172.0" promptText="Nama Barang" />
+               <TextField fx:id="hargaField" layoutX="15.0" layoutY="293.0" prefHeight="36.0" prefWidth="172.0" promptText="Harga" />
+               <Button layoutX="222.0" layoutY="373.0" onAction="#tambahBarang" prefHeight="58.0" prefWidth="148.0" text="Tambah">
+               <font>
+                  <Font size="20.0" />
+               </font></Button>
+               <TextField fx:id="qtyField" layoutX="14.0" layoutY="373.0" prefHeight="39.0" prefWidth="173.0" promptText="Qty" />
+               <Button layoutX="405.0" layoutY="374.0" onAction="#updateBarang" prefHeight="57.0" prefWidth="165.0" text="Update">
+               <font>
+                  <Font size="20.0" />
+               </font></Button>
+               <Button layoutX="595.0" layoutY="375.0" onAction="#hapusBarang" prefHeight="55.0" prefWidth="155.0" text="Hapus">
+               <font>
+                  <Font size="20.0" />
+               </font></Button>
+               <!-- Button for selecting or uploading an item image -->
+               <Button layoutX="14.0" layoutY="478.0" onAction="#handleSelectImage" prefHeight="52.0" prefWidth="177.0" text="Select Image">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <ImageView fx:id="previewImage" fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="555.0" pickOnBounds="true" preserveRatio="true" />
+              <TableView fx:id="tableView" layoutX="222.0" layoutY="70.0" prefHeight="268.0" prefWidth="548.0">
+                  <columns>
+                      <!-- Use a custom cell factory to display images -->
+                    <TableColumn fx:id="idColumn" prefWidth="127.0" text="No">
+          <cellValueFactory>
+              <PropertyValueFactory property="nomorUrutan" />
+          </cellValueFactory>
+      </TableColumn>
+                      <TableColumn fx:id="gambarColumn" prefWidth="127.0" text="Gambar">
+                          <cellValueFactory>
+                              <PropertyValueFactory property="gambar" />
+                          </cellValueFactory>
+                      </TableColumn>
+                      <TableColumn fx:id="kodeColumn" prefWidth="147.0" text="Kode Barang">
+                          <cellValueFactory>
+                              <PropertyValueFactory property="kode" />
+                          </cellValueFactory>
+                      </TableColumn>
+                      <TableColumn fx:id="namaColumn" prefWidth="147.0" text="Nama">
+                          <cellValueFactory>
+                              <PropertyValueFactory property="nama" />
+                          </cellValueFactory>
+                      </TableColumn>
+                      <TableColumn fx:id="hargaColumn" prefWidth="202.0" text="Harga">
+                          <cellValueFactory>
+                              <PropertyValueFactory property="harga" />
+                          </cellValueFactory>
+                      </TableColumn>
+                      <TableColumn fx:id="qtyColumn" prefWidth="163.0" text="Qty">
+                          <cellValueFactory>
+                              <PropertyValueFactory property="qty" />
+                          </cellValueFactory>
+                      </TableColumn>
+                  </columns>
+              </TableView>
+            <Text layoutX="23.0" layoutY="199.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Code Barang">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Text layoutX="20.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nama Barang">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Text layoutX="20.0" layoutY="274.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Harga Barang">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Text layoutX="19.0" layoutY="357.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jumlah Barang">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Text layoutX="22.0" layoutY="451.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gambar Barang">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Text layoutX="352.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" Barang Minimarket">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

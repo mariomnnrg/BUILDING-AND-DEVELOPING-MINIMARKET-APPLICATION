@@ -1,0 +1,57 @@
+#AnchorPane {
+    -fx-background-color: #f4f4f4; /* Set the background color */
+}
+
+Label {
+    -fx-text-fill: #333333; /* Set the label text color */
+    -fx-font-weight: bold; /* Make the text bold */
+}
+
+Button {
+    -fx-background-color: #4CAF50; /* Set the button background color to green */
+    -fx-text-fill: #ffffff; /* Set the text color */
+    -fx-font-weight: bold; /* Make the text bold */
+}
+
+Button:hover {
+    -fx-background-color: #45a049; /* Change button background color on hover */
+}
+
+TableView {
+    -fx-control-inner-background: #ffffff; /* Set the table background color */
+}
+
+TableColumn {
+    -fx-background-color: #4CAF50; /* Set the column header background color */
+    -fx-text-fill: #ffffff; /* Set the column header text color */
+    -fx-font-weight: bold; /* Make the column header text bold */
+}
+
+#transaksiButton {
+    -fx-background-color: #0c3c07; /* Set a specific color for the 'Transaksi' button */
+}
+
+#logoutButton {
+    -fx-background-color: #d9534f; /* Set a specific color for the 'Logout' button */
+}
+#topBorder {
+    -fx-border-style: solid;
+    -fx-border-width: 0 0 2 0; /* top right bottom left */
+    -fx-border-color: black;
+}
+
+/* Right AnchorPane with Border */
+#rightBorder {
+    -fx-border-style: solid;
+    -fx-border-width: 0 2 0 0; /* top right bottom left */
+    -fx-border-color: black;
+}
+Button:hover{
+    -fx-font-size: 10.0; /* Set the font size for the hover state */
+}
+/* Center AnchorPane with Border */
+#centerBorder {
+    -fx-border-style: solid;
+    -fx-border-width: 0 2 0 2; /* top right bottom left */
+    -fx-border-color: black;
+}

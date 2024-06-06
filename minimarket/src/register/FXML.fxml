@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="428.0" prefWidth="723.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="register.registerController">
+ <stylesheets>
+        <URL value="@fxml.css" />
+    </stylesheets>
+   <children>
+        <TextField fx:id="email" layoutX="422.0" layoutY="283.0" prefHeight="25.0" prefWidth="232.0" promptText="Email" />
+        <PasswordField fx:id="passwordField" layoutX="422.0" layoutY="154.0" prefHeight="25.0" prefWidth="232.0" promptText="Password" />
+        <Button fx:id="signup" layoutX="508.0" layoutY="326.0" onAction="#handlesignupAction" text="Sign Up" textAlignment="CENTER" />
+      <Label layoutX="497.0" layoutY="23.0" text="REGISTER">
+         <font>
+            <Font name="Bodoni MT Condensed" size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="424.0" layoutY="250.0" prefHeight="25.0" prefWidth="48.0" text="Email" />
+      <Label layoutX="425.0" layoutY="126.0" text="Password" />
+      <Button accessibleRole="CHECK_MENU_ITEM" layoutX="559.0" layoutY="376.0" onAction="#handleloginAction" text="Login Here" textAlignment="CENTER" textOverrun="CENTER_WORD_ELLIPSIS" />
+      <Label layoutX="425.0" layoutY="380.0" text="Already Have Account? " />
+      <Label layoutX="423.0" layoutY="66.0" text="Nama" />
+      <PasswordField fx:id="passwordconfirmField" layoutX="422.0" layoutY="218.0" prefHeight="25.0" prefWidth="232.0" promptText="Confirm Password" />
+      <Label layoutX="422.0" layoutY="193.0" text="Confirm Password" />
+      <TextField fx:id="usernameField" layoutX="422.0" layoutY="91.0" prefHeight="25.0" prefWidth="232.0" promptText="Username" />
+      <AnchorPane layoutY="-6.0" prefHeight="438.0" prefWidth="364.0" styleClass="image-container">
+         <children>
+            <ImageView fitHeight="205.0" fitWidth="232.0" layoutX="80.0" layoutY="112.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/minimarket.png" />
+               </image>
+            </ImageView>
+            <Text fill="#468a4d" layoutX="37.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Minimarket">
+               <font>
+                  <Font name="Berlin Sans FB" size="60.0" />
+               </font>
+            </Text>
+            <Text fill="#679e51" layoutX="26.0" layoutY="366.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Harga Murah Banyak Pilihan">
+               <font>
+                  <Font name="Constantia" size="25.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+    </children>
+   <effect>
+      <ColorAdjust brightness="-0.23" contrast="0.02" hue="1.0" saturation="-0.3" />
+   </effect>
+</AnchorPane>

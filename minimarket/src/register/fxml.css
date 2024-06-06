@@ -1,0 +1,25 @@
+
+.image-container {
+    -fx-background-color: blue; /* Set the background color of the AnchorPane to green */
+}
+
+TextField, PasswordField {
+    -fx-background-color: #ffffff; /* Set the text field background color */
+    -fx-border-color: #cccccc; /* Set the border color */
+    -fx-border-width: 1; /* Set the border width */
+    -fx-border-radius: 5; /* Set the border radius */
+}
+
+Button {
+    -fx-background-color: #4CAF50; /* Set the button background color to green */
+    -fx-text-fill: #ffffff; /* Set the text color */
+    -fx-font-weight: bold; /* Make the text bold */
+}
+
+
+
+Label {
+    -fx-text-fill: #333333; /* Set the label text color */
+    -fx-font-weight: bold; /* Make the text bold */
+}
+
